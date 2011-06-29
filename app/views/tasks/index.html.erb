@@ -1,0 +1,11 @@
+<ul id="pending">
+  <% @pending.each do |task| %>
+    <li><%=task.title%></li>
+  <% end %>
+</ul>
+<ul id="done">
+  <% @done.each do |task| %>
+    <li><%=task.title%></li>
+  <% end %>
+</ul>
+<%=link_to 'New Task', new_bucket_task_path(@bucket)%>
